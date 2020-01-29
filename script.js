@@ -8,7 +8,6 @@ textCountBtn.addEventListener('click' , function() {
     newText = newText.split(' ').filter(word => {
         return word.length > 0 && /[آ-ی]/.test(word);
     });
-    console.log(newText)
     contentFooter.querySelector('#count').innerHTML = newText.length
     contentFooter.classList.add('active');
 });
