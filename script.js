@@ -4,7 +4,8 @@ let textCountBtn = document.querySelector('#text-count-btn');
 
 textCountBtn.addEventListener('click' , function() {
     contentFooter.classList.remove('active');
-    let newText = text.value.replace(/[a-z()?!\d%\n؟!،.;:؛*<>"'@,{}=`]/gi , '');
+    let newText = text.value.replace(/[a-z()?!\d%؟!،.;:؛*<>"'@,{}=\[\]`]/gi , '');
+    newText = newText.replace(/[\n]/gi , ' ');
     newText = newText.split(' ').filter(word => {
         return word.length > 0 && /[آ-ی]/.test(word);
     });
