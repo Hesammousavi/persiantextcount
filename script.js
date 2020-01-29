@@ -1,13 +1,14 @@
 let contentFooter = document.querySelector('.content-footer');
-document.querySelector('#text-count-btn').addEventListener('click' , function() {
+let text = document.querySelector('#text');
+let textCountBtn = document.querySelector('#text-count-btn');
+
+textCountBtn.addEventListener('click' , function() {
     contentFooter.classList.remove('active');
-    let text = document.querySelector('#text');
-    let newText = text.value.replace(/[a-z()?!\d%\n؟!،.;:<>"'@,{}=/`]/gi , '');
-    // console.log();
-    // let addtionword = ['و','را','با','از'];
+    let newText = text.value.replace(/[a-z()?!\d%\n؟!،.;:؛*<>"'@,{}=`]/gi , '');
     newText = newText.split(' ').filter(word => {
-        return word.length > 0;
+        return word.length > 0 && /[آ-ی]/.test(word);
     });
+    console.log(newText)
     contentFooter.querySelector('#count').innerHTML = newText.length
     contentFooter.classList.add('active');
 });
