@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: Sahel FD, sans-serif;
 }
+
 html {
 
   font-size: 100%;
@@ -60,7 +61,6 @@ body {
 }
 
 .content .content-body button:hover {
-    /* background-image: linear-gradient(125deg , #463ac8 , #594fc7) ; */
     cursor: pointer;
     background-position: right center;
 }
