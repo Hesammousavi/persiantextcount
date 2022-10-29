@@ -26,7 +26,7 @@ body {
 }
 
 .content .content-head .title {
-  background: #594fc7;
+  background-image: linear-gradient(125deg , #594fc7 , #463ac8) ;
   color: white;
   font-size: 2rem;
   font-weight: bold;
@@ -46,20 +46,23 @@ body {
   font-size: 1rem;
 }
 
-.content .content-body textarea::placeholder {
-  font-size: 1rem;
-  /* padding: 1rem; */
-}
-
 .content .content-body button {
   margin-top: 15px;
   border-radius: 3px;
-  background-color: #594fc7;
+  background-image: linear-gradient(125deg , #594fc7 , #3a7cc8) ;
   color: white;
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: bold;
   border: none;
+  transition: 0.5s;
+  background-size: 300% auto;
+}
+
+.content .content-body button:hover {
+    /* background-image: linear-gradient(125deg , #463ac8 , #594fc7) ; */
+    cursor: pointer;
+    background-position: right center;
 }
 
 .content .content-footer {
